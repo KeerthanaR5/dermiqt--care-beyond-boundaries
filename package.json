@@ -1,0 +1,35 @@
+{
+  "name": "dermiqt--care-beyond-boundaries",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Multi-archetype brand experience & digital e-commerce showcase featuring editorial, cyber, minimal, and creative design systems.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host=0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/canvas-confetti": "^1.9.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "canvas-confetti": "^1.9.4",
+    "gsap": "^3.15.0",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "react-router-dom": "^7.18.4",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}
