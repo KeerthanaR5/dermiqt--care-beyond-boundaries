@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-black: #0B0B0B;
+    --bg-charcoal: #18191B;
+    --bg-card: #1F2124;
+    --bg-card-hover: #26282D;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(213, 255, 131, 0.4);
+    --text-white: #FFFFFF;
+    --text-silver: #D4D7D8;
+    --text-metallic: #9EA3A6;
+    --text-graphite: #666666;
+    --accent-lime: #D5FF83;
+    --accent-lime-dim: rgba(213, 255, 131, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0B0B0B;
+    color: #D4D7D8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Inter', 'Manrope', sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Glass and Surface utilities */
+.kimaro-surface {
+  background: radial-gradient(120% 120% at 50% 0%, #1e2023 0%, #121315 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.kimaro-surface-metallic {
+  background: linear-gradient(135deg, #BAC0C4 0%, #8E9397 45%, #6B7074 100%);
+  color: #121315;
+}
+
+.kimaro-glass {
+  background: rgba(24, 25, 28, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kimaro-glass-bright {
+  background: rgba(36, 38, 43, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Neon Glow utilities */
+.glow-lime-sm {
+  box-shadow: 0 0 15px -2px rgba(213, 255, 131, 0.35);
+}
+
+.glow-lime-lg {
+  box-shadow: 0 0 35px -5px rgba(213, 255, 131, 0.5);
+}
+
+.text-glow-lime {
+  text-shadow: 0 0 12px rgba(213, 255, 131, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282a2d;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3f44;
+}
+
+/* Lens Aperture & Rotating animations */
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3.5s ease-in-out infinite;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Focus HUD styling */
+.focus-bracket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+}
+
+.focus-bracket-tl {
+  top: 0;
+  left: 0;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.focus-bracket-tr {
+  top: 0;
+  right: 0;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+
+.focus-bracket-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+}
+
+.focus-bracket-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
